@@ -20,17 +20,20 @@
 
     <header class="topbar">
       <div class="brand">
-        <div class="brandMark"></div>
+        <div class="brandMark">
+         <img
+            class="brandLogo"
+            src="https://rijlyshralhtyzhgdgas.supabase.co/storage/v1/object/public/Widgets/chemitadev/cheems.png"
+            alt="Cheems"
+          />
+        </div>
         <div class="brandText">
           <div class="brandTitle" id="appTitle">Cargando…</div>
           <div class="brandSub" id="appSubtitle"></div>
         </div>
       </div>
 
-      <div class="topActions">
-        <button class="btn ghost" id="resetBtn" type="button">Reset</button>
-        <button class="btn" id="copyBtn" type="button">Copiar URL</button>
-      </div>
+      
     </header>
 
     <main class="shell">
@@ -47,8 +50,11 @@
 
           <div class="outputRow">
             <input id="finalUrl" class="input mono" type="text" readonly />
-            <button id="openBtn" class="btn small" type="button">Abrir</button>
+            <button id="copyBtn" class="btn small" type="button">
+              Copiar
+            </button>
           </div>
+
 
           <div class="badgeRow">
             <span class="pill" id="statusPill">Listo</span>
