@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Chat Horizontal • Menu</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <div class="bgGlow" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="brand">
+        <div class="brandMark"></div>
+        <div class="brandText">
+          <div class="brandTitle" id="appTitle">Cargando…</div>
+          <div class="brandSub" id="appSubtitle"></div>
+        </div>
+      </div>
+
+      <div class="topActions">
+        <button class="btn ghost" id="resetBtn" type="button">Reset</button>
+        <button class="btn" id="copyBtn" type="button">Copiar URL</button>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="left">
+        <div class="card">
+          <div class="cardHeader">
+            <h2 class="cardTitle">Salida</h2>
+            <p class="cardHint">Pega este URL en tu Browser Source (OBS).</p>
+          </div>
+
+          <div class="outputRow">
+            <input id="baseUrl" class="input" type="text" placeholder="URL base del widget…" hidden/>
+          </div>
+
+          <div class="outputRow">
+            <input id="finalUrl" class="input mono" type="text" readonly />
+            <button id="openBtn" class="btn small" type="button">Abrir</button>
+          </div>
+
+          <div class="badgeRow">
+            <span class="pill" id="statusPill">Listo</span>
+            <span class="muted" id="countPill">0 parametros</span>
+          </div>
+        </div>
+
+        <div id="formMount" class="formGrid"></div>
+      </section>
+
+      <aside class="right">
+        <div class="card">
+          <div class="cardHeader">
+            <h2 class="cardTitle">Preview</h2>
+            <p class="cardHint">Esta es una vista previa aproximada, no se han aplicado todos los estilos.</p>
+          </div>
+
+          <div class="previewTools">
+            <label class="switchLine">
+              <input id="livePreview" type="checkbox" checked />
+              <span>Auto-refrescar preview</span>
+            </label>
+
+            <button class="btn ghost small" id="refreshBtn" type="button">
+              Refrescar
+            </button>
+          </div>
+
+          <div class="previewFrameWrap">
+            <iframe id="previewFrame" title="Preview"></iframe>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

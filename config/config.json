@@ -1,0 +1,223 @@
+{
+  "app": {
+    "title": "Chat Horizontal • Configuración",
+    "subtitle": "Genera el URL con parámetros para tu widget (OBS Browser Source).",
+    "brandLabel": "HORIZONTAL CHAT"
+  },
+  "base": {
+    "baseUrlLabel": "URL base del widget",
+    "baseUrlPlaceholder": "https://cscheems.github.io/horizontal_chat/",
+    "defaultBaseUrl": "https://cscheems.github.io/horizontal_chat/"
+  },
+  "sections": [
+    {
+      "title": "Apariencia del Chat",
+      "description": "Colores, tipografía y tamaño.",
+      "fields": [
+        {
+          "type": "color",
+          "id": "fondoColor",
+          "label": "Color de fondo",
+          "param": "fondoColor",
+          "default": "#0C1633"
+        },
+        {
+          "type": "color",
+          "id": "colorLetra",
+          "label": "Color de letra",
+          "param": "colorLetra",
+          "default": "#ffffff"
+        },
+        {
+          "type": "range",
+          "id": "opacidad",
+          "label": "Opacidad del fondo",
+          "param": "opacidad",
+          "default": 1,
+          "min": 0,
+          "max": 1,
+          "step": 0.05,
+          "suffix": ""
+        },
+        {
+          "type": "text",
+          "id": "fuenteLetra",
+          "label": "Fuente",
+          "param": "fuenteLetra",
+          "default": "Consolas",
+          "placeholder": "Consolas, Open Sans, Arial..."
+        },
+        {
+          "type": "number",
+          "id": "tamanoFuente",
+          "label": "Tamaño de fuente (px)",
+          "param": "tamanoFuente",
+          "default": 18,
+          "min": 10,
+          "max": 60,
+          "step": 1
+        },
+        {
+          "type": "text",
+          "id": "separator",
+          "label": "Separador entre mensajes",
+          "param": "separator",
+          "default": "|",
+          "placeholder": "|"
+        }
+      ]
+    },
+    {
+      "title": "Usuario",
+      "description": "Activa/desactiva partes del usuario.",
+      "fields": [
+        {
+          "type": "switch",
+          "id": "timeStamp",
+          "label": "Mostrar timestamp",
+          "param": "timeStamp",
+          "default": false
+        },
+        {
+          "type": "switch",
+          "id": "showAvatar",
+          "label": "Mostrar avatar",
+          "param": "showAvatar",
+          "default": true
+        },
+        {
+          "type": "switch",
+          "id": "mostrarUsuario",
+          "label": "Mostrar usuario",
+          "param": "mostrarUsuario",
+          "default": true
+        },
+        {
+          "type": "switch",
+          "id": "showBadges",
+          "label": "Mostrar badges",
+          "param": "showBadges",
+          "default": true
+        },
+        {
+          "type": "switch",
+          "id": "showRole",
+          "label": "Mostrar rol",
+          "param": "showRole",
+          "default": false
+        }
+      ]
+    },
+    {
+      "title": "Alertas de Twitch",
+      "description": "Qué alertas se muestran.",
+      "fields": [
+        {
+          "type": "switch",
+          "id": "mostrarRaids",
+          "label": "Mostrar raids",
+          "param": "mostrarRaids",
+          "default": true
+        },
+        {
+          "type": "switch",
+          "id": "mostrarFollow",
+          "label": "Mostrar follow",
+          "param": "mostrarFollow",
+          "default": true
+        },
+        {
+          "type": "switch",
+          "id": "mostrarSub",
+          "label": "Mostrar sub",
+          "param": "mostrarSubs",
+          "default": true
+        },
+        {
+          "type": "switch",
+          "id": "mostrarGiftebSubs",
+          "label": "Mostrar gifted subs",
+          "param": "mostrarGiftebSubs",
+          "default": true
+        },
+        {
+          "type": "switch",
+          "id": "mostrarGiftBomb",
+          "label": "Mostrar gift bomb",
+          "param": "mostrarGiftBomb",
+          "default": true
+        },
+        {
+          "type": "switch",
+          "id": "mostrarRacha",
+          "label": "Mostrar watch streak",
+          "param": "mostrarRacha",
+          "default": true
+        }
+      ]
+    },
+    {
+      "title": "Comportamiento",
+      "description": "Duraciones, filtros y límites.",
+      "fields": [
+        {
+          "type": "number",
+          "id": "animacionDuracion",
+          "label": "Duración de Alerta (milisegundos)",
+          "param": "animacionDuracion",
+          "default": 10000,
+          "min": 500,
+          "max": 600000,
+          "step": 100
+        },
+        {
+          "type": "number",
+          "id": "tiempoMs",
+          "label": "Ocultar mensaje después de (segundos, 0 = nunca)",
+          "param": "tiempoMs",
+          "default": 0,
+          "min": 0,
+          "max": 3600,
+          "step": 1
+        },
+        {
+          "type": "switch",
+          "id": "excluirComandos",
+          "label": "Excluir comandos (mensajes que empiezan con !)",
+          "param": "excluirComandos",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "usuariosIgnorados",
+          "label": "Usuarios ignorados (separados por coma)",
+          "param": "usuariosIgnorados",
+          "default": "StreamElements, Nightbot",
+          "placeholder": "ChemitaOs,OtroUsuario"
+        }
+      ]
+    },
+    {
+      "title": "Conexión Streamerbot",
+      "description": "Host y puerto donde corre Streamerbot.",
+      "fields": [
+        {
+          "type": "text",
+          "id": "hostInput",
+          "label": "Host",
+          "param": "hostInput",
+          "default": "127.0.0.1",
+          "placeholder": "127.0.0.1"
+        },
+        {
+          "type": "text",
+          "id": "portInput",
+          "label": "Puerto",
+          "param": "portInput",
+          "default": "8080",
+          "placeholder": "8080"
+        }
+      ]
+    }
+  ]
+}
