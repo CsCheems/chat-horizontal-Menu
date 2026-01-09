@@ -28,6 +28,13 @@
           "param": "colorLetra",
           "default": "#ffffff"
         },
+         {
+          "type": "switch",
+          "id": "customColor",
+          "label": "Usar Colores Personales",
+          "param": "customColor",
+          "default": true
+        },
         {
           "type": "range",
           "id": "opacidad",
