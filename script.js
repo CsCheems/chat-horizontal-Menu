@@ -142,20 +142,34 @@ function renderField(field) {
         return wrap;
     }
 
-    if (field.type === "color") {
-        input = document.createElement("input");
-        input.className = "input";
-        input.type = "color";
-        input.value = state[field.id];
+  if (field.type === "color" && field.variant === "swatch") {
+      const wrapper = document.createElement("div");
+      wrapper.className = "colorPicker";
 
-        input.addEventListener("input", () => {
+      const swatch = document.createElement("button");
+      swatch.type = "button";
+      swatch.className = "colorSwatch";
+      swatch.style.setProperty("--swatch-color", state[field.id]);
+
+      const input = document.createElement("input");
+      input.type = "color";
+      input.value = state[field.id];
+      input.className = "colorInput";
+
+      input.addEventListener("input", () => {
         state[field.id] = input.value;
+        swatch.style.setProperty("--swatch-color", input.value);
         buildUrl();
-        refreshPreview();
-        });
+        refreshPreview?.();
+      });
 
-        wrap.appendChild(input);
-        return wrap;
+      swatch.addEventListener("click", () => input.click());
+
+      wrapper.appendChild(swatch);
+      wrapper.appendChild(input);
+      wrap.appendChild(wrapper);
+
+      return wrap;
   }
 
   if (field.type === "range") {
@@ -200,7 +214,6 @@ function renderField(field) {
   input.addEventListener("input", () => {
     state[field.id] =
       field.type === "number" ? Number(input.value) : input.value;
-
     buildUrl();
     refreshPreview();
   });

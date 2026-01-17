@@ -15,18 +15,20 @@
       "description": "Colores, tipografía y tamaño.",
       "fields": [
         {
-          "type": "color",
-          "id": "fondoColor",
-          "label": "Color de fondo",
-          "param": "fondoColor",
-          "default": "#0C1633"
+            "type": "color",
+            "id": "fondoColor",
+            "label": "Color de fondo",
+            "param": "fondoColor",
+            "default": "#0C1633",
+            "variant": "swatch"
         },
         {
           "type": "color",
           "id": "colorLetra",
           "label": "Color de letra",
           "param": "colorLetra",
-          "default": "#ffffff"
+          "default": "#ffffff",
+          "variant": "swatch"
         },
          {
           "type": "switch",
